@@ -1,9 +1,7 @@
-const express = require("express");
-const app = express();
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+'use strict';
 
-GLOBAL.document = new JSDOM(html).window.document;
+const express = require('express');
+const app = express();
 
 app.get("/", function(req, res) {
   res.send("You are live!")
