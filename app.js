@@ -1,9 +1,9 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
 
 app.get("/", function(req, res) {
   res.send("You are live!")
-})
+});
 
 document.querySelector(".reveal-content").addEventListener("submit", submitForm);
 
@@ -33,4 +33,4 @@ function sendEmail(name, email, subject, message) {
   }).then((message) => alert("Email successfully sent!"))
 }
 
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000);
