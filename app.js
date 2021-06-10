@@ -9,7 +9,7 @@ app.get("/", function(req, res) {
   res.send("You are live!")
 });
 
-dom.querySelector(".reveal-content").addEventListener("submit", submitForm);
+dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault()
