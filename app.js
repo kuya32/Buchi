@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const jsdom = require('jsdom');
-const { beforeEach } = require('mocha')
+const beforeEach = require('mocha')
 let frontend;
 const options = {
   contentType: "text/html",
