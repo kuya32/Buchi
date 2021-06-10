@@ -1,5 +1,9 @@
 const express = require("express");
 const app = express();
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+GLOBAL.document = new JSDOM(html).window.document;
 
 app.get("/", function(req, res) {
   res.send("You are live!")
