@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kuya32/Buchi/issues"
   },
-  "homepage": "https://github.com/kuya32/Buchi#readme"
+  "homepage": "https://github.com/kuya32/Buchi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
