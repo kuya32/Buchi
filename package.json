@@ -1,0 +1,19 @@
+{
+  "name": "buchi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuya32/Buchi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuya32/Buchi/issues"
+  },
+  "homepage": "https://github.com/kuya32/Buchi#readme"
+}
