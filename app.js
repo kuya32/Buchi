@@ -1,5 +1,3 @@
-/*eslint-env browser*/
-
 'use strict';
 
 const express = require('express');
