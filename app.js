@@ -2,22 +2,23 @@
 
 const express = require('express');
 const app = express();
+var document;
 
 app.get("/", function(req, res) {
   res.send("You are live!")
 });
 
-window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
+document.querySelector(".reveal-content").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault()
 
-  let name = window.document.querySelector(".form-control#name").value;
-  let email = window.document.querySelector(".form-control#email").value;
-  let subject = window.document.querySelector(".form-control#subject").value;
-  let message = window.document.querySelector(".form-control#message").value;
+  let name = document.querySelector(".form-control#name").value;
+  let email = document.querySelector(".form-control#email").value;
+  let subject = document.querySelector(".form-control#subject").value;
+  let message = document.querySelector(".form-control#message").value;
 
-  window.document.querySelector(".reveal-content").reset();
+  document.querySelector(".reveal-content").reset();
 
   sendEmail(name, email, subject, message)
 }
