@@ -2,7 +2,6 @@
 
 const express = require('express');
 const app = express();
-var document = Document();
 
 app.get("/", function(req, res) {
   res.send("You are live!")
