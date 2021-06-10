@@ -3,17 +3,15 @@
 const express = require('express');
 const app = express();
 const jsdom = require('jsdom');
-const { describe, it, beforeEach } = require('mocha')
+const { beforeEach } = require('mocha')
 let frontend;
 const options = {
   contentType: "text/html",
 };
 
-describe('app.js', () => {
-  beforeEach(function() {
-    return jsdom.fromFile('/Users/MAcod/Projects/Buchi/index.html', options).then((dom) => {
-      frontend = dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
-    });
+beforeEach(function() {
+  return jsdom.fromFile('/Users/MAcod/Projects/Buchi/index.html', options).then((dom) => {
+    frontend = dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
   });
 });
 
