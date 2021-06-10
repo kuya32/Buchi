@@ -2,14 +2,26 @@
 
 const express = require('express');
 const app = express();
-const jsdom = require("jsdom");
-const dom = new jsdom.JSDOM("./index.html")
+const jsdom = require('jsdom');
+const { describe, it, beforeEach } = require('mocha')
+let frontend;
+const options = {
+  contentType: "text/html",
+};
 
-app.get("/", function(req, res) {
-  res.send("You are live!")
+describe('app.js', () => {
+  beforeEach(function() {
+    return jsdom.fromFile('/Users/MAcod/Projects/Buchi/index.html', options).then((dom) => {
+      frontend = dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
+    });
+  });
 });
 
-dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
+app.get("/", function(req, res) {
+  res.send("You are live!");
+});
+
+// dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault()
