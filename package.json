@@ -2,14 +2,14 @@
   "name": "buchi",
   "version": "1.0.0",
   "description": "",
-  "main": "main.bc58148c.js",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.bc58148c.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

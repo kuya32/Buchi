@@ -2,12 +2,14 @@
 
 const express = require('express');
 const app = express();
+const jsdom = require("jsdom");
+const dom = new jsdom.JSDOM("./index.html")
 
 app.get("/", function(req, res) {
   res.send("You are live!")
 });
 
-document.querySelector(".reveal-content").addEventListener("submit", submitForm);
+dom.querySelector(".reveal-content").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault()
