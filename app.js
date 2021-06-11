@@ -1,25 +1,8 @@
 'use strict';
 
-const express = require('express');
-const app = express();
-const jsdom = require('jsdom');
-const beforeEach = require('mocha')
-let frontend;
-const options = {
-  contentType: "text/html",
-};
+const sendMessage = document.querySelector(".reveal-content")
 
-beforeEach(function() {
-  return jsdom.fromFile('/Users/MAcod/Projects/Buchi/index.html', options).then((dom) => {
-    frontend = dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
-  });
-});
-
-app.get("/", function(req, res) {
-  res.send("You are live!");
-});
-
-// dom.window.document.querySelector(".reveal-content").addEventListener("submit", submitForm);
+sendMessage.addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault()
@@ -46,5 +29,3 @@ function sendEmail(name, email, subject, message) {
 
   }).then((message) => alert("Email successfully sent!"))
 }
-
-app.listen(process.env.PORT || 5000);
